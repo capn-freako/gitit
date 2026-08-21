@@ -11,3 +11,9 @@ gitit-users
 github.conf
 /.stack-work/
 /static/
+
+# MacOS
+.DS_Store
+
+# lock files
+*.lock
