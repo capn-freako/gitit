@@ -3,3 +3,192 @@
 
 /* Put your custom style modifications here: */
 
+p, h1, h2, h3, h4, h5, ul, ol {
+    font-family: serif
+}
+
+/* For people who like limited-width columns */
+/* p { max-width: 65em; } */
+
+html { background: transparent; color: black; } */
+/* html { background: #f9f9f9; color: black; } */
+
+/* Oddly, I need the following in order for the next spec to work. */
+code { }
+
+/* Counteract gitit settings. I don't want background, borders, or padding for inline code. */
+code {
+    font-size: 115%;
+    /* background-color: none; */
+    background: transparent;
+    border: none; overflow: auto;
+    padding: none;
+}
+
+pre>code { padding: 0em; }
+
+pre, blockquote.ghc {
+    margin-top: 0.5em;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+blockquote {
+    padding: 0em 1em 0em 1em;
+    color: #444;
+    border:1px dotted #ddd;
+    background: rgba(0,0,255,0.03); /* mostly-transparent blue */
+}
+
+pre, blockquote.ghc {
+    border: 1px solid #ddd; overflow: auto; border-radius: 0.3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border:1px solid #ddd;
+    font-size: 85%; /* down from the <code> expansion */
+    /* background: rgba(0,0,0,0.04); */ /* mostly-transparent black */
+    background: rgba(255,255,0,0.15); /* mostly-transparent yellow */
+}
+
+blockquote.ghc {
+    background: rgba(30, 132, 73  ,0.10); /* green */
+    /* line-height: 125%; */  /* normally larger */
+}
+
+blockquote.ghc, blockquote.ghc > p, blockquote.ghc > ul {
+    font-family: monospace;
+}
+blockquote.ghc > ul {
+    font-size: 115%;
+}
+blockquote.ghc code { font-size: 100%; }
+
+table {
+    padding-right: 0.6em;
+    padding-left:  0.67em;
+    margin: auto; /* center */
+    text-align: center;
+    /* Override border settings in reset-fonts-grids */
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+tr { vertical-align:middle; }
+td { padding: 5px; text-align: center; }
+img.bordered, table.bordered, td.bordered, .bordered-cells td {
+    padding:10px;
+    border:1px solid rgba(0,0,0,0.3);
+    border-radius: 0.2em;
+    background: rgba(255,255,0,0.015);
+}
+td img { width:100%; }
+
+*[caption] {
+    position: relative;
+    padding-bottom: 1.5em;
+}
+*[caption]:after {
+    content: attr(caption);
+    position: absolute;
+    bottom: 4px;
+    left: 0px; right: 0px; /* centered */
+    font-size: 80%;
+    opacity: 0.7;
+}
+
+*.banner {
+    text-align:center;
+    background-color:blue;
+    color:yellow;
+    font-size:250%;
+    padding:1em;
+    border:2px solid red;
+    margin:0.5em;
+}
+
+/* Example:
+<div class=banner>working here</div>
+*/
+
+*.title {
+    text-align: center;
+    font-size: 225%;
+    font-weight: bold;
+}
+
+/* Use with a table of pictures immediately following a code block. */
+*.join-code { margin-top:-0.7em; }
+
+/* Suppress TOC entries deeper than 2nd-level */
+/* div#TOC > ul > li > ul > li ul { display: none; } */
+
+*.aside:before {
+    content: 'Aside: ';
+    /* font-weight: bold; */
+    font-style: italic;
+} 
+
+*.aside {
+    background: rgba(0,255,0,0.03);
+}
+
+div.aside {
+    border:2px solid #ddd;
+    /* border-radius: 0.3em; */
+    padding: 0.75em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.exercise {
+    border-radius:0.5em;
+    border:1px solid;
+    padding: 15px 15px 0px 15px; /* all but bottom */
+    margin-bottom: 10px;
+}
+.exercise { border-color: LightGreen; }
+
+/* .exercise:before { content: "Exercise: "; font-style: italic; } */
+
+ul, ol {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 1em;
+    padding-left: 0em;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0em;
+    padding-left: 0.3em;
+/*     text-indent: 1em; */
+}
+
+/* Remove vertical spacing in nested ULs */
+/*
+ul > li > ul > li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+*/
+
+/* /\* Add space below each each element of outermost lists *\/ */
+/* ul > li           { margin-bottom: 0.3em; } */
+/* ul > li > ul > li { margin-bottom: 0.0em; } */
+
+.math-inset {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.math-inset > p {
+    margin-bottom: 0.25em;
+}
